@@ -2,9 +2,57 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
+    <title>swipe</title>
+    <style>
+        *{padding: 0;margin: 0;list-style: none;}
+        .list{width:200px;}
+        .list li{border: 1px solid red;height: 30px;line-height: 30px;}
+        .list.green li{border-color: green;}
+        .list.blue li{border-color: blue;}
+    </style>
 </head>
 <body>
 
+<div id="mSwipe">
+    <div class="swipe-wrapper">
+        <div class="swipe-pannel">
+            <ul class="list">
+                <li>첫번째 패널 리스트 입니다</li>
+                <li>첫번째 패널 리스트 입니다</li>
+                <li>첫번째 패널 리스트 입니다</li>
+                <li>첫번째 패널 리스트 입니다</li>
+                <li>첫번째 패널 리스트 입니다</li>
+                <li>첫번째 패널 리스트 입니다</li>
+            </ul>
+        </div>
+        <div class="panelSwipe">
+            <ul class="list green">
+                <li>두번째 패널 리스트 입니다</li>
+                <li>두번째 패널 리스트 입니다</li>
+                <li>두번째 패널 리스트 입니다</li>
+                <li>두번째 패널 리스트 입니다</li>
+                <li>두번째 패널 리스트 입니다</li>
+                <li>두번째 패널 리스트 입니다</li>
+            </ul>
+        </div>
+        <div class="panelSwipe">
+            <ul class="list blue">
+                <li>세번째 패널 리스트 입니다</li>
+                <li>세번째 패널 리스트 입니다</li>
+                <li>세번째 패널 리스트 입니다</li>
+                <li>세번째 패널 리스트 입니다</li>
+                <li>세번째 패널 리스트 입니다</li>
+                <li>세번째 패널 리스트 입니다</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<script data-main="../../src/component/swipe" src="../../bower_components/requirejs/require.js"></script>
+<script>
+    var mSwipe = new Swipe({
+        id: 'mSwipe'
+    });
+</script>
 </body>
 </html>
