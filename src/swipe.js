@@ -1,9 +1,12 @@
 define([
     'jquery',
     'underscore',
-    'src/event',
-    'src/core'
-], function($, _, event, core) {
+    'src/controller'
+], function($, _, Controller) {
     'use strict';
+
+    var control = new Controller();
+    control.swipe();
+
 
 });

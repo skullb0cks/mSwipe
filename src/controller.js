@@ -1,13 +1,15 @@
 define([
     'jquery',
-    'underscore'
-], function($, _) {
-    var Swipe = function() {};
-    Swipe.prototype.initialize = function() {
-
+    'underscore',
+    'src/ui',
+    'src/event'
+], function($, _, UI, Event) {
+    var controller = function() {
+        this.UI = new UI();
+        this.EVENT = new Event();
     };
-    Swipe.prototype.setElement = function() {
-
+    controller.prototype.swipe = function(object) {
+        console.log(this.UI.setPanel());
     };
-    return Swipe;
+    return controller;
 });
