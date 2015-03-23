@@ -5,8 +5,9 @@ define([
 ], function($, _, Controller) {
     'use strict';
 
-    var control = new Controller();
-    control.swipe();
-
+    var control = new Controller({
+        id: '#mSwipe',
+        height: 300
+    });
 
 });

@@ -3,13 +3,14 @@ define([
     'underscore',
     'src/ui',
     'src/event'
-], function($, _, UI, Event) {
-    var controller = function() {
-        this.UI = new UI();
-        this.EVENT = new Event();
+], function($, _, UI, Events) {
+    var controller = function(options) {
+        this.options = options;
+        this.initialize();
     };
-    controller.prototype.swipe = function(object) {
-        console.log(this.UI.setPanel());
+    controller.prototype.initialize = function() {
+        this.UI = new UI(this.options);
+        this.EVENTS = new Events();
     };
     return controller;
 });
