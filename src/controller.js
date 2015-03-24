@@ -6,7 +6,7 @@ define([
 ], function($, _, UI, Events) {
     var controller = function(options) {
         this.options = options;
-        this.initialize();
+        this.initialize.apply(this, arguments);
     };
     controller.prototype.initialize = function() {
         this.UI = new UI(this.options);
