@@ -13,7 +13,7 @@ define([
     UI.prototype.setElement = function() {
         this.setArea();
         this.setWrapPanel();
-        this.setPanel();
+        this.setPanels();
         return this;
     };
     UI.prototype.setArea = function() {
@@ -26,8 +26,11 @@ define([
     UI.prototype.setWrapPanel = function() {
 
     };
-    UI.prototype.setPanel = function() {
-
+    UI.prototype.setPanels = function() {
+        var panels = $(this.options.id).children().children();
+        panels.css({
+            'float': 'left'
+        });
     };
     return UI;
 });
